@@ -280,11 +280,19 @@
                         <a href="mailto:kishordahal40@gmail.com"><i class="fas fa-envelope"></i></a>
                     </div>
                 </div>
-                <img src=""C:\Users\DELL\OneDrive\Desktop\kishor photo.JPG"" alt="Kishor Dahal" class="profile-img">
-                .profile-img {
-    background: #f0f0f0 url('fallback-image.jpg') no-repeat center;
-    background-size: cover;
-}
+                <!-- Replace your current image tag with this one -->
+<img src=""D:\Personal Documents\kishor photo.jpg"" alt="Kishor Dahal" class="profile-img" 
+     onerror="this.src='https://via.placeholder.com/300x300/2E7D32/FFFFFF?text=Kishor+Dahal'">
+
+<!-- Add this to your existing CSS (keep all other CSS the same) -->
+<style>
+    .profile-img {
+        /* Existing styles remain */
+        background: #f0f0f0; /* Fallback color */
+        display: block;
+        margin: 0 auto;
+    }
+</style>
             </div>
         </section>
 
