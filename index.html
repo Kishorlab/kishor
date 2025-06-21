@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -95,47 +95,55 @@
             padding: 0 2rem;
         }
 
-        /* NEW PROFILE SECTION STYLES */
-        .hero-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
+        section {
             min-height: 100vh;
-            padding: 2rem;
+            padding: 4rem 0;
         }
 
-        .profile-content {
+        .home-content {
             display: flex;
-            flex-direction: column;
             align-items: center;
-            text-align: center;
-            gap: 2rem;
-            max-width: 600px;
+            justify-content: space-between;
+            flex-wrap: wrap;
         }
 
         .profile-img {
-            width: 200px;
-            height: 200px;
+            width: 300px;
+            height: 300px;
             border-radius: 50%;
             object-fit: cover;
             border: 5px solid var(--accent-color);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
         }
 
-        .profile-text h1 {
-            font-size: 2.5rem;
-            margin-bottom: 0.5rem;
+        .home-text {
+            flex: 1;
+            min-width: 300px;
+            padding: 2rem;
         }
 
-        .profile-text h2 {
-            font-size: 1.5rem;
-            color: var(--accent-color);
+        h1 {
+            font-size: 3rem;
             margin-bottom: 1rem;
-            font-weight: 400;
+            color: var(--accent-color);
         }
 
-        .profile-text p {
+        h2 {
+            font-size: 2rem;
             margin-bottom: 1.5rem;
+            color: var(--accent-color);
+            border-bottom: 2px solid var(--accent-color);
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.5rem;
+            margin: 1.5rem 0 1rem;
+            color: var(--accent-color);
+        }
+
+        p {
+            margin-bottom: 1rem;
         }
 
         .btn {
@@ -146,6 +154,7 @@
             border-radius: 5px;
             text-decoration: none;
             font-weight: bold;
+            margin-top: 1rem;
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
@@ -154,12 +163,87 @@
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
         }
 
-        /* Rest of your existing styles */
+        .social-links {
+            margin-top: 2rem;
+        }
+
+        .social-links a {
+            color: var(--text-color);
+            font-size: 1.5rem;
+            margin-right: 1.5rem;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: var(--accent-color);
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        .experience-item, .education-item, .research-item {
+            margin-bottom: 2rem;
+            padding-bottom: 1rem;
+            border-bottom: 1px solid #444;
+        }
+
+        .experience-item:last-child, .education-item:last-child, .research-item:last-child {
+            border-bottom: none;
+        }
+
+        .date {
+            color: #aaa;
+            font-style: italic;
+            margin-bottom: 0.5rem;
+        }
+
+        ul {
+            padding-left: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        li {
+            margin-bottom: 0.5rem;
+        }
+
+        .skills-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .skill-category {
+            flex: 1;
+            min-width: 250px;
+        }
+
         .hidden {
             display: none;
         }
 
         @media (max-width: 768px) {
+            .home-content {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .profile-img {
+                margin-bottom: 2rem;
+            }
+
+            .social-links {
+                justify-content: center;
+            }
+
             .nav-links {
                 display: none;
             }
@@ -182,56 +266,150 @@
         </nav>
     </header>
 
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Kishor Dahal</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      text-align: center;
-      padding: 50px;
-    }
-    img {
-      width: 200px;
-      border-radius: 10px;
-      border: 2px solid #444;
-    }
-  </style>
-</head>
-<body>
-  <img src="D:\Personal Documents\kishor photo.jpg">
- 
+    <div class="container">
+        <!-- Home Section -->
+        <section id="home" class="active-section">
+            <div class="home-content">
+                <div class="home-text">
+                    <h1>Kishor Dahal</h1>
+                    <h3>Forest Technician | Soil Science Researcher</h3>
+                    <p>I am a passionate forestry professional with expertise in soil science, forest monitoring systems, and environmental research. My work focuses on sustainable forest management and ecological conservation.</p>
+                    <a href="#" class="btn" onclick="showSection('resume')">View CV</a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/kishor-dahal-ab66ba34b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:kishordahal40@gmail.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <img src="D:\Personal Documents\kishor photo.jpg" alt="Kishor Dahal" class="profile-img">
+            </div>
+        </section>
 
-</body>
-</html>
-
-                    <div class="profile-text">
-                        <h1>Kishor Dahal</h1>
-                        <h2>Forest Technician | Soil Science Researcher</h2>
-                        <p>I am a passionate forestry professional with expertise in soil science, forest monitoring systems, and environmental research. My work focuses on sustainable forest management and ecological conservation.</p>
-                        <a href="#" class="btn" onclick="showSection('resume')">View CV</a>
+        <!-- Resume Section -->
+        <section id="resume" class="hidden">
+            <h2>Curriculum Vitae</h2>
+            
+            <div class="card">
+                <h3>Personal Details</h3>
+                <p><strong>Name:</strong> Kishor Dahal</p>
+                <p><strong>Location:</strong> Bagmati, Nepal</p>
+                <p><strong>Email:</strong> kishordahal40@gmail.com</p>
+                <p><strong>Phone:</strong> +977-9869721067</p>
+            </div>
+            
+            <div class="card">
+                <h3>Education</h3>
+                <div class="education-item">
+                    <h4>B.S. Bachelor of Science – Forestry</h4>
+                    <p class="date">2020 - 2024</p>
+                    <p>Tribhuvan University, Institute of Forestry, Nepal (First Division, 70.80 %)</p>
+                   
+                </div>
+            
+        <div class="education-item"> 
+            <h4> 10+2 Science</h4>
+            <p class="date"2017-2019</p>
+            <p>Khwopa Secondary School, Nepal </p>
+        </div>
+            <div class="card">
+                <h3>Skills</h3>
+                <div class="skills-container">
+                    <div class="skill-category">
+                        <h4>Computing Skills</h4>
+                        <ul>
+                            <li>GIS (ArcMap, ArcCatalog)</li>
+                            <li>R, R-Studio</li>
+                            <li>Google Earth Engine (Beginner)</li>
+                            <li>Microsoft Word, Excel, PowerPoint</li>
+                            <li>Maxent</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h4>Communication Skills</h4>
+                        <ul>
+                            <li>Communication & presentation skills</li>
+                            <li>Awareness training</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Keep all your other existing sections -->
-        <section id="resume" class="hidden">
-            <!-- Your resume content -->
-        </section>
-
+        <!-- Experience Section -->
         <section id="experience" class="hidden">
-            <!-- Your experience content -->
+            <h2>Professional Experience</h2>
+            
+            <div class="card">
+                <div class="experience-item">
+                    <h3>Forest Technician</h3>
+                    <p class="date">Forest Action, Kathmandu, Nepal | Feb 2025 to Present</p>
+                    <ul>
+                        <li>Participated in intensive training focused on data management within the National Forest Information System (NFIS) and SIS frameworks.</li>
+                        <li>Gained hands-on skills in data collection, entry, storage, and quality assurance for forest information systems.</li>
+                        <li>Contributed to data handling activities of various forests under the Terai Arc Landscape (TAL) project area.</li>
+                        <li>Collaborated with forest technicians, DFO staff, and REDD-IC representatives to strengthen technical capacities in forest monitoring systems.</li>
+                        <li>Developed competency in using checklists, ensuring data quality standards, and understanding safeguards mechanisms in REDD+ frameworks.</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Soil Science Intern</h3>
+                    <p class="date">Soil Tech Consultant (P) Ltd., Kathmandu, Nepal | May 2024 to November 2024</p>
+                    <ul>
+                        <li>Conducted soil chemical analysis as part of bachelor's thesis research on "Topographical Influence on Chemical Properties of Forest Soil".</li>
+                        <li>Performed laboratory testing of soil parameters, including organic carbon, total nitrogen, available phosphorus, potassium, and soil pH.</li>
+                        <li>Gained practical experience in soil and water analysis, microbial assessments, organic carbon fractionation, metal concentration testing, and evaluation of physical and chemical soil properties.</li>
+                        <li>Contributed to water quality assessment projects by analyzing key environmental indicators and helping evaluate ecosystem health.</li>
+                    </ul>
+                </div>
+                
+                <div class="experience-item">
+                    <h3>Paid Research Intern</h3>
+                    <p class="date">Forest Research and Training Centre (FRTC), Nepal | Feb 2024 to June 2024</p>
+                    <ul>
+                        <li>Conducted forest area survey, map preparation, forest inventory, forest and social data collection, and analysis.</li>
+                        <li>Devised Forest Operational Plans for various Community Forest User Groups (CFUGs).</li>
+                        <li>Collected and prepared soil samples from field sites as part of my BSc research, ensuring proper handling and labeling for laboratory analysis.</li>
+                        <li>10 days training program on Forest Mapping and Degradation Assessment Through Google Earth Engine.</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <h2>Trainings & Workshops</h2>
+            <div class="card">
+                <ul>
+                    <li>10 days training program on Forest Mapping and Degradation Assessment Through Google Earth Engine organized by Forest Research and Training Centre, 2024.</li>
+                    <li>Training on R software and Maxent organized by Forest Research and Training Centre, 2024.</li>
+                    <li>Two weeks field training program by the Institute of Forestry, Hetauda for understanding different management and conservation approaches of natural resource management, 2023.</li>
+                    <li>15 days observation tour for park activities, camera trapping, forest management practices, nursery plantation, and plantation estimation, 2023.</li>
+                    <li>7 days of field training at Parsa National Park and Chitwan National Park for forest tree and NTFP identification, Forest Mensuration, and Forest Surveying practices by the Institute of Forestry, 2022.</li>
+                    <li>Training on Forest management, surveying, Mensuration, Silviculture, Utilization, and others organized by the Institute of Forestry, 2021.</li>
+                    <li>GPS and GIS training conducted by the Institute of Forestry, Hetauda, 2021.</li>
+                    <li>2 days workshop on effective technical writing, proposals writing, report writing, and presentation skills.</li>
+                </ul>
+            </div>
         </section>
 
+        <!-- Research Section -->
         <section id="research" class="hidden">
-            <!-- Your research content -->
+            <h2>Research Publications</h2>
+            
+            <div class="card">
+                <h3>Ongoing Research</h3>
+                <div class="research-item">
+                    <h4>Topographical Influence on Chemical Properties of Forest Soil</h4>
+                    <p>DAHAL, K. (2025). Topographical Influence on Chemical Properties of Forest Soil.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <h3>Published Works</h3>
+                <p>Currently no published works. Check back later for updates.</p>
+            </div>
         </section>
     </div>
 
     <script>
+        // Toggle between dark and light mode
         function toggleMode() {
             document.body.classList.toggle('light-mode');
             const icon = document.querySelector('.mode-toggle i');
@@ -244,20 +422,27 @@
             }
         }
 
+        // Show selected section and hide others
         function showSection(sectionId) {
+            // Hide all sections
             document.querySelectorAll('section').forEach(section => {
                 section.classList.add('hidden');
             });
+            
+            // Show selected section
             document.getElementById(sectionId).classList.remove('hidden');
             
+            // Update active nav link
             document.querySelectorAll('.nav-links a').forEach(link => {
                 link.style.color = '';
             });
             event.target.style.color = 'var(--accent-color)';
             
+            // Scroll to top
             window.scrollTo(0, 0);
         }
 
+        // Set home as default section
         document.addEventListener('DOMContentLoaded', function() {
             showSection('home');
         });
