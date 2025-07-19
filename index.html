@@ -1,4 +1,4 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -105,6 +105,12 @@
             align-items: center;
             justify-content: space-between;
             flex-wrap: wrap;
+            gap: 2rem;
+        }
+
+        .profile-img-container {
+            order: 2;
+            text-align: center;
         }
 
         .profile-img {
@@ -120,6 +126,7 @@
             flex: 1;
             min-width: 300px;
             padding: 2rem;
+            order: 1;
         }
 
         h1 {
@@ -236,6 +243,11 @@
                 text-align: center;
             }
 
+            .profile-img-container, .home-text {
+                order: initial;
+                width: 100%;
+            }
+
             .profile-img {
                 margin-bottom: 2rem;
             }
@@ -275,16 +287,14 @@
                     <h3>Forest Technician | Soil Science Researcher</h3>
                     <p>I am a passionate forestry professional with expertise in GIS, Forest Management, soil science, Forest ecology and environmental research. My work focuses on sustainable forest management and ecological conservation.</p>
                     <a href="#" class="btn" onclick="showSection('resume')">View CV</a>
-                   <div class="social-links">
-    <a href="https://www.linkedin.com/in/kishor-dahal-ab66ba34b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-    <a href="mailto:kishordahal40@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/kishor-dahal-ab66ba34b/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="mailto:kishordahal40@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                    </div>
                 </div>
-<img src="https://raw.githubusercontent.com/Kishorlab/kishor/main/profile.jpg"
- .profile-image {
-    width: 200px;
-    border-radius: 50%;
-    border: 5px solid green;
-}
+                <div class="profile-img-container">
+                    <img src="https://raw.githubusercontent.com/Kishorlab/kishor/main/profile.jpg" alt="Kishor Dahal" class="profile-img">
+                </div>
             </div>
         </section>
 
@@ -306,14 +316,15 @@
                     <h4>B.S. Bachelor of Science – Forestry</h4>
                     <p class="date">2020 - 2024</p>
                     <p>Tribhuvan University, Institute of Forestry, Nepal (First Division, 70.80 %)</p>
-                   
                 </div>
             
-        <div class="education-item"> 
-            <h4> 10+2 Science</h4>
-            <p class="date"2017-2019</p>
-            <p>Khwopa Secondary School, Nepal </p>
-        </div>
+                <div class="education-item"> 
+                    <h4>10+2 Science</h4>
+                    <p class="date">2017-2019</p>
+                    <p>Khwopa Secondary School, Nepal</p>
+                </div>
+            </div>
+            
             <div class="card">
                 <h3>Skills</h3>
                 <div class="skills-container">
