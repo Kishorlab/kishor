@@ -418,8 +418,7 @@
                 </ul>
             </div>
         </section>
-
-      <!-- Research Section -->
+<!-- Research Section -->
 <section id="research" class="hidden">
     <h2>Research Publications</h2>
     
@@ -432,14 +431,8 @@
             <p class="journal"><em>B.Sc. Thesis, Tribhuvan University</em></p>
             
             <div class="publication-actions">
-                <a href="#" class="btn abstract-btn" onclick="showAbstract('abstract1')">Read Abstract</a>
+                <a href="#" class="btn abstract-btn" onclick="openAbstractModal()">Read Abstract</a>
                 <a href="C:/Users/DELL/OneDrive/Desktop/Abstract of My Thesis.pdf" class="btn" target="_blank">Read Full Text</a>
-            </div>
-            
-            <div id="abstract1" class="abstract hidden">
-                <p>The soil properties in forests are influenced by the forest diversity, topographic features, and climate variables. The role of forest soil properties on the global carbon cycle has garnered significant research interest in recent years. However, the effects of topographic variables, such as altitude and aspect, on soil dynamics have received comparatively less scrutiny, particularly in Himalayan regions, such as in Nepal. This study explores the effects of interactions among altitude, aspect, and soil depth on soil organic carbon (SOC), total nitrogen (TN), available phosphorus (P), available potassium (K), and soil pH in Bhairam Community Forest, Surkhet district, Karnali province of Nepal. A total of 99 soil samples at 0-30 cm depths were collected from 33 plots randomly located across three aspects (Northeast, Southeast, Southwest) of four elevation zones (700-900m, 900-1100m, 1100-1300m, 1300-1500m). Soil samples were analyzed using standard laboratory methods, with statistical analyses conducted using linear mixed-effects modeling. Results show aspect significantly influenced SOC (p < 0.05), TN (P < 0.05), and P (p < 0.001), with highest concentrations on southeast aspects. Altitude significantly affected SOC (p < 0.001), TN (P < 0.001), and P (p < 0.05), showing higher values at elevated altitudes. No significant effects were observed for K and pH. These findings highlight topographic factors' importance in regulating soil fertility and carbon sequestration potential in Himalayan ecosystems.</p>
-                
-                <p><strong>Key words:</strong> Soil sample analysis, soil organic carbon, total nitrogen, soil pH, soil nutrient availability, mixed-effects modeling</p>
             </div>
         </div>
     </div>
@@ -451,6 +444,67 @@
     </div>
 </section>
 
+<!-- Abstract Modal -->
+<div id="abstractModal" class="modal hidden">
+    <div class="modal-content">
+        <span class="close-btn" onclick="closeAbstractModal()">&times;</span>
+        <h3>Abstract</h3>
+        <p>The soil properties in forests are influenced by the forest diversity, topographic features, and climate variables. The role of forest soil properties on the global carbon cycle has garnered significant research interest in recent years. However, the effects of topographic variables, such as altitude and aspect, on soil dynamics have received comparatively less scrutiny, particularly in Himalayan regions, such as in Nepal. This study explores the effects of interactions among altitude, aspect, and soil depth on soil organic carbon (SOC), total nitrogen (TN), available phosphorus (P), available potassium (K), and soil pH in Bhairam Community Forest, Surkhet district, Karnali province of Nepal. A total of 99 soil samples at 0-30 cm depths were collected from 33 plots randomly located across three aspects (Northeast, Southeast, Southwest) of four elevation zones (700-900m, 900-1100m, 1100-1300m, 1300-1500m). Soil samples were analyzed using standard laboratory methods, with statistical analyses conducted using linear mixed-effects modeling. Results show aspect significantly influenced SOC (p < 0.05), TN (P < 0.05), and P (p < 0.001), with highest concentrations on southeast aspects. Altitude significantly affected SOC (p < 0.001), TN (P < 0.001), and P (p < 0.05), showing higher values at elevated altitudes. No significant effects were observed for K and pH. These findings highlight topographic factors' importance in regulating soil fertility and carbon sequestration potential in Himalayan ecosystems.</p>
+        <p><strong>Key words:</strong> Soil sample analysis, soil organic carbon, total nitrogen, soil pH, soil nutrient availability, mixed-effects modeling</p>
+    </div>
+</div>
+
+<style>
+/* Modal Styles */
+.modal {
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 8px;
+    width: 80%;
+    max-width: 700px;
+    max-height: 80vh;
+    overflow-y: auto;
+    position: relative;
+}
+
+.close-btn {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.modal h3 {
+    margin-top: 0;
+    color: var(--accent-color);
+}
+</style>
+
+<script>
+function openAbstractModal() {
+    event.preventDefault();
+    document.getElementById('abstractModal').classList.remove('hidden');
+}
+
+function closeAbstractModal() {
+    document.getElementById('abstractModal').classList.add('hidden');
+}
+</script>
     <script>
         // Toggle between dark and light mode
         function toggleMode() {
