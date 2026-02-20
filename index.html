@@ -3,165 +3,68 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Kishor Dahal - Portfolio</title>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+<title>Kishor - Forestry Research Portfolio</title>
 
 <style>
 :root {
-    --bg-color: #121212;
-    --text-color: #ffffff;
-    --accent-color: #4CAF50;
-    --card-bg: #1e1e1e;
-    --nav-bg: #000000;
-}
-
-.light-mode {
-    --bg-color: #f5f5f5;
-    --text-color: #333333;
-    --accent-color: #2E7D32;
-    --card-bg: #ffffff;
-    --nav-bg: #333333;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
+    --accent-color: #2e7d32;
+    --bg-color: #f4f7f6;
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--bg-color);
+    color: #333;
 }
 
 header {
-    background-color: var(--nav-bg);
-    padding: 1rem 2rem;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    background: var(--accent-color);
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
 
 nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1200px;
-    margin: 0 auto;
+    background: #1b5e20;
+    text-align: center;
+    padding: 10px;
 }
 
-.logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: var(--accent-color);
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-
-.nav-links li {
-    margin-left: 2rem;
-}
-
-.nav-links a {
-    color: var(--text-color);
+nav a {
+    color: white;
+    margin: 0 15px;
     text-decoration: none;
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: var(--accent-color);
-}
-
-.mode-toggle {
-    background: none;
-    border: none;
-    color: var(--text-color);
-    font-size: 1.2rem;
+    font-weight: bold;
     cursor: pointer;
 }
 
-.container {
-    max-width: 1200px;
-    margin: 6rem auto 2rem;
-    padding: 0 2rem;
+nav a:hover {
+    text-decoration: underline;
 }
 
 section {
-    display: none;
-    padding: 4rem 0;
+    padding: 40px 20px;
 }
 
-.active-section {
-    display: block;
+.hidden {
+    display: none;
 }
 
 .card {
-    background-color: var(--card-bg);
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
     border-radius: 8px;
-    padding: 1.5rem;
-    margin-bottom: 2rem;
-}
-
-h1 {
-    font-size: 3rem;
-    color: var(--accent-color);
-    margin-bottom: 1rem;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.1);
 }
 
 h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
-    color: var(--accent-color);
-    border-bottom: 2px solid var(--accent-color);
-    padding-bottom: 0.5rem;
-}
-
-h3 {
-    color: var(--accent-color);
-}
-
-.profile-img {
-    width: 280px;
-    height: 280px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--accent-color);
-}
-
-.home-content {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 2rem;
-}
-
-.social-links a {
-    font-size: 1.5rem;
-    margin-right: 1rem;
-    color: var(--text-color);
-}
-
-.social-links a:hover {
     color: var(--accent-color);
 }
 
 ul {
-    padding-left: 1.5rem;
-}
-
-@media (max-width:768px){
-    .home-content{
-        flex-direction: column;
-        text-align:center;
-    }
+    padding-left: 20px;
 }
 </style>
 </head>
@@ -169,162 +72,117 @@ ul {
 <body>
 
 <header>
-<nav>
-<div class="logo">Kishor Dahal</div>
-<ul class="nav-links">
-<li><a href="#" onclick="showSection(event,'home')">Home</a></li>
-<li><a href="#" onclick="showSection(event,'resume')">Resume</a></li>
-<li><a href="#" onclick="showSection(event,'experience')">Experience</a></li>
-<li><a href="#" onclick="showSection(event,'research')">Research</a></li>
-</ul>
-<button class="mode-toggle" onclick="toggleMode()">
-<i class="fas fa-moon"></i>
-</button>
-</nav>
+    <h1>Kishor</h1>
+    <p>Forestry Researcher | GIS & Remote Sensing Specialist</p>
 </header>
 
-<div class="container">
+<nav>
+    <a onclick="showSection(event,'home')">Home</a>
+    <a onclick="showSection(event,'resume')">Resume</a>
+    <a onclick="showSection(event,'experience')">Experience</a>
+    <a onclick="showSection(event,'research')">Research</a>
+    <a onclick="showSection(event,'contact')">Contact</a>
+</nav>
 
 <!-- HOME -->
-<section id="home" class="active-section">
-<div class="home-content">
-<div>
-<h1>Kishor Dahal</h1>
-<h3>Forest Technician | Environmental Researcher</h3>
-<p>
-Dedicated researcher with expertise in Forestry, Soil Science, Wildlife Management, Forest Ecology, and Sustainable Land Use, with strong skills in GIS, R Programming, and Google Earth Engine for ecological analysis and conservation planning. I am passionate about sustainable forest management, biodiversity conservation, and applying geospatial technologies for environmental decision-making and climate change mitigation.
-</p>
-<div class="social-links">
-<a href="https://www.linkedin.com/in/kishor-dahal-ab66ba34b/" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="mailto:kishordahal40@gmail.com"><i class="fas fa-envelope"></i></a>
-<a href="https://github.com/Kishorlab" target="_blank"><i class="fab fa-github"></i></a>
-</div>
-</div>
-<img src="https://github.com/Kishorlab/kishor/blob/master/profile.jpg?raw=true" class="profile-img">
-</div>
+<section id="home">
+    <h2>Professional Summary</h2>
+    <div class="card">
+        <p>
+        I am a dedicated forestry researcher with strong academic training and practical field experience in forest ecology, biodiversity assessment, and geospatial technologies. My academic and research interests focus on forest resource assessment, wildlife habitat modeling, climate change impact analysis, and spatial data analysis using modern GIS and remote sensing tools.
+        </p>
+
+        <p>
+        Throughout my academic journey, I have been actively involved in forest inventory, vegetation analysis, biodiversity monitoring, and community-based forest management studies. I possess strong technical skills in ArcGIS, QGIS, Google Earth Engine, R software, and Maxent modeling, which I apply in research related to species distribution modeling and forest mapping.
+        </p>
+
+        <p>
+        I aim to contribute to sustainable forest management and ecological conservation through scientific research, spatial analysis, and evidence-based decision making. I am particularly interested in pursuing advanced research opportunities that integrate remote sensing, climate modeling, and biodiversity conservation.
+        </p>
+    </div>
 </section>
 
 <!-- RESUME -->
-<section id="resume">
-<h2>Curriculum Vitae</h2>
+<section id="resume" class="hidden">
+    <h2>Education</h2>
+    <div class="card">
+        <ul>
+            <li>Bachelor in Forestry</li>
+            <li>Ongoing Research in Forest Ecology & GIS Applications</li>
+        </ul>
+    </div>
 
-<div class="card">
-<h3>Education</h3>
-<p><strong>B.S. Bachelor of Science – Forestry (2020–2024)</strong><br>
-Tribhuvan University, Institute of Forestry, Nepal (First Division, 70.80%)</p>
+    <h2>Skills</h2>
+    <div class="card">
+        <ul>
+            <li>ArcGIS & QGIS</li>
+            <li>Google Earth Engine</li>
+            <li>R Programming</li>
+            <li>Maxent Modeling</li>
+            <li>Forest Inventory & Biodiversity Assessment</li>
+        </ul>
+    </div>
 
-<p><strong>10+2 Science (2017–2019)</strong><br>
-Khwopa Secondary School, Nepal</p>
-</div>
-
-<div class="card">
-<h3>Skills</h3>
-<ul>
-<li>GIS (ArcMap, ArcCatalog)</li>
-<li>R, R-Studio</li>
-<li>Google Earth Engine</li>
-<li>Maxent Species Distribution Modeling</li>
-<li>Microsoft Word, Excel, PowerPoint</li>
-<li>Forest Inventory & Mensuration</li>
-<li>Soil & Water Laboratory Analysis</li>
-<li>Report Writing & Proposal Development</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Awards & Research Grants</h3>
-<p>
-Student Research Grant for BSc Thesis (2024) – Awarded by Forest Research and Training Center, Karnali Province Government for research titled:
-<em>"Topographical Influence on Chemical Properties of Forest Soil in Karnali Province, Nepal"</em>.
-</p>
-</div>
+    <h2>Awards</h2>
+    <div class="card">
+        <ul>
+            <li>Academic Excellence Recognition</li>
+        </ul>
+    </div>
 </section>
 
 <!-- EXPERIENCE -->
-<section id="experience">
-<h2>Professional Experience</h2>
+<section id="experience" class="hidden">
+    <h2>Professional Experience</h2>
 
-<div class="card">
-<h3>Senior Research Assistant – ANSAB</h3>
-<p>Aug 2025 – Sep 2025</p>
-<ul>
-<li>Worked in Nepal’s first national-level resource inventory of high-value NTFPs funded by the UK Government’s Darwin Initiative.</li>
-<li>Conducted field inventory of Himalayan medicinal plants up to 5,100 m altitude in Dolpa District.</li>
-<li>Supported sustainable management and conservation of Himalayan NTFPs.</li>
-</ul>
-</div>
+    <div class="card">
+        <ul>
+            <li>Forest Inventory and Field Data Collection</li>
+            <li>Vegetation and Biodiversity Survey</li>
+            <li>GIS Mapping and Spatial Data Analysis</li>
+            <li>Community Forest Assessment</li>
+        </ul>
+    </div>
 
-<div class="card">
-<h3>Forest Technician – Forest Action</h3>
-<p>Feb 2025 – Present</p>
-<ul>
-<li>Participated in NFIS and SIS data management training.</li>
-<li>Contributed to forest monitoring activities under Terai Arc Landscape.</li>
-<li>Collaborated with DFO and REDD-IC representatives on forest safeguard mechanisms.</li>
-</ul>
-</div>
-
-<div class="card">
-<h3>Soil Science Intern – Soil Tech Consultant</h3>
-<p>May 2024 – Nov 2024</p>
-<ul>
-<li>Conducted soil chemical analysis including SOC, TN, P, K, pH.</li>
-<li>Worked on soil carbon fractionation and environmental quality assessments.</li>
-</ul>
-</div>
-
-<!-- TRAININGS MOVED HERE -->
-<h2>Trainings & Workshops</h2>
-
-<div class="card">
-<ul>
-<li>10 days training on Forest Mapping and Degradation Assessment Through Google Earth Engine (FRTC, 2024)</li>
-<li>Training on R Software and Maxent (FRTC, 2024)</li>
-<li>Two weeks field training on natural resource management (IOF, 2023)</li>
-<li>15 days observation tour for park activities and camera trapping (2023)</li>
-<li>7 days field training at Parsa and Chitwan National Park (2022)</li>
-<li>GPS and GIS training conducted by Institute of Forestry (2021)</li>
-<li>Workshop on technical writing, proposal writing and presentation skills</li>
-</ul>
-</div>
-
+    <!-- Trainings moved HERE -->
+    <h2>Trainings & Workshops</h2>
+    <div class="card">
+        <ul>
+            <li>10 Days Training on Forest Mapping and GIS Applications</li>
+            <li>Training on R Software and Maxent for Species Distribution Modeling</li>
+            <li>Google Earth Engine Workshop</li>
+            <li>GPS & GIS Field Training</li>
+        </ul>
+    </div>
 </section>
 
 <!-- RESEARCH -->
-<section id="research">
-<h2>Research Publications</h2>
-
-<div class="card">
-<h3>BSc Thesis (2025)</h3>
-<p><strong>Topographical Influence on Chemical Properties of Forest Soil in Karnali Province</strong></p>
-<p>
-This research examined how altitude and aspect influence soil organic carbon, total nitrogen, available phosphorus, potassium and pH across different elevation zones in Bhairam Community Forest, Surkhet. Statistical analysis using linear mixed-effects modeling revealed significant impacts of aspect and altitude on SOC and TN, highlighting topographic influence on carbon sequestration and soil fertility in Himalayan ecosystems.
-</p>
-</div>
-
-<div class="card">
-<h3>Published Works</h3>
-<p>Currently no published works.</p>
-</div>
+<section id="research" class="hidden">
+    <h2>Research Work</h2>
+    <div class="card">
+        <ul>
+            <li>Species Distribution Modeling using Maxent</li>
+            <li>Forest Cover Change Analysis using Remote Sensing</li>
+            <li>Climate Change Impact Assessment on Forest Ecosystems</li>
+        </ul>
+    </div>
 </section>
 
-</div>
+<!-- CONTACT -->
+<section id="contact" class="hidden">
+    <h2>Contact</h2>
+    <div class="card">
+        <p>Email: your-email@example.com</p>
+        <p>LinkedIn: your-profile-link</p>
+    </div>
+</section>
 
 <script>
-function toggleMode(){
-document.body.classList.toggle("light-mode");
-const icon=document.querySelector(".mode-toggle i");
-icon.classList.toggle("fa-moon");
-icon.classList.toggle("fa-sun");
-}
+function showSection(event, sectionId) {
+    const sections = document.querySelectorAll("section");
+    sections.forEach(section => section.classList.add("hidden"));
 
-function showSection(event,id){
-event.preventDefault();
-document.querySelectorAll("section").forEach(sec=>{
-sec.classList.remove("active-section");
-});
-document.getElementById(id).classList.add("active-section");
-window.scrollTo(0,0);
+    document.getElementById(sectionId).classList.remove("hidden");
 }
 </script>
 
