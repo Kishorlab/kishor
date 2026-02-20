@@ -17,28 +17,28 @@
 
 .light-mode {
     --bg-color: #f5f5f5;
-    --text-color: #333;
+    --text-color: #333333;
     --accent-color: #2E7D32;
     --card-bg: #ffffff;
-    --nav-bg: #333;
+    --nav-bg: #333333;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: 0.3s;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 body {
-    font-family: 'Segoe UI', sans-serif;
-    background: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
 }
 
 header {
-    background: var(--nav-bg);
+    background-color: var(--nav-bg);
     padding: 1rem 2rem;
     position: fixed;
     width: 100%;
@@ -51,7 +51,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     max-width: 1200px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 .logo {
@@ -61,8 +61,8 @@ nav {
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
+    list-style: none;
 }
 
 .nav-links li {
@@ -70,8 +70,8 @@ nav {
 }
 
 .nav-links a {
-    text-decoration: none;
     color: var(--text-color);
+    text-decoration: none;
     font-weight: 500;
 }
 
@@ -94,32 +94,25 @@ nav {
 }
 
 section {
-    padding: 4rem 0;
     display: none;
+    padding: 4rem 0;
 }
 
 .active-section {
     display: block;
 }
 
-.home-content {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.profile-img {
-    width: 260px;
-    height: 260px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid var(--accent-color);
+.card {
+    background-color: var(--card-bg);
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
 }
 
 h1 {
-    font-size: 2.8rem;
+    font-size: 3rem;
     color: var(--accent-color);
+    margin-bottom: 1rem;
 }
 
 h2 {
@@ -127,32 +120,32 @@ h2 {
     margin-bottom: 1.5rem;
     color: var(--accent-color);
     border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 0.5rem;
 }
 
-.card {
-    background: var(--card-bg);
-    padding: 1.5rem;
-    border-radius: 8px;
-    margin-bottom: 2rem;
+h3 {
+    color: var(--accent-color);
 }
 
-.btn {
-    background: var(--accent-color);
-    color: white;
-    padding: 0.7rem 1.5rem;
-    border-radius: 5px;
-    text-decoration: none;
-    display: inline-block;
-    margin-top: 1rem;
+.profile-img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid var(--accent-color);
 }
 
-ul {
-    padding-left: 1.5rem;
+.home-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
 }
 
 .social-links a {
+    font-size: 1.5rem;
     margin-right: 1rem;
-    font-size: 1.4rem;
     color: var(--text-color);
 }
 
@@ -160,7 +153,11 @@ ul {
     color: var(--accent-color);
 }
 
-@media(max-width:768px){
+ul {
+    padding-left: 1.5rem;
+}
+
+@media (max-width:768px){
     .home-content{
         flex-direction: column;
         text-align:center;
@@ -194,8 +191,9 @@ ul {
 <div>
 <h1>Kishor Dahal</h1>
 <h3>Forest Technician | Environmental Researcher</h3>
-<p>Dedicated researcher with expertise in Forestry, Soil Science, Wildlife Management, Forest Ecology, and Sustainable Land Use with strong GIS, R and Google Earth Engine skills.</p>
-<a href="#" class="btn" onclick="showSection(event,'resume')">View CV</a>
+<p>
+Dedicated researcher with expertise in Forestry, Soil Science, Wildlife Management, Forest Ecology, and Sustainable Land Use, with strong skills in GIS, R Programming, and Google Earth Engine for ecological analysis and conservation planning. I am passionate about sustainable forest management, biodiversity conservation, and applying geospatial technologies for environmental decision-making and climate change mitigation.
+</p>
 <div class="social-links">
 <a href="https://www.linkedin.com/in/kishor-dahal-ab66ba34b/" target="_blank"><i class="fab fa-linkedin"></i></a>
 <a href="mailto:kishordahal40@gmail.com"><i class="fas fa-envelope"></i></a>
@@ -212,25 +210,33 @@ ul {
 
 <div class="card">
 <h3>Education</h3>
-<p><strong>BSc Forestry</strong> (2020-2024)<br>Tribhuvan University – 70.80%</p>
-<p><strong>+2 Science</strong> (2017-2019)<br>Khwopa Secondary School</p>
+<p><strong>B.S. Bachelor of Science – Forestry (2020–2024)</strong><br>
+Tribhuvan University, Institute of Forestry, Nepal (First Division, 70.80%)</p>
+
+<p><strong>10+2 Science (2017–2019)</strong><br>
+Khwopa Secondary School, Nepal</p>
 </div>
 
 <div class="card">
 <h3>Skills</h3>
 <ul>
 <li>GIS (ArcMap, ArcCatalog)</li>
-<li>R & RStudio</li>
+<li>R, R-Studio</li>
 <li>Google Earth Engine</li>
-<li>Maxent Modeling</li>
-<li>Microsoft Office</li>
-<li>Forest Inventory & Survey</li>
+<li>Maxent Species Distribution Modeling</li>
+<li>Microsoft Word, Excel, PowerPoint</li>
+<li>Forest Inventory & Mensuration</li>
+<li>Soil & Water Laboratory Analysis</li>
+<li>Report Writing & Proposal Development</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Awards</h3>
-<p>Student Research Grant – Forest Research & Training Center (2024)</p>
+<h3>Awards & Research Grants</h3>
+<p>
+Student Research Grant for BSc Thesis (2024) – Awarded by Forest Research and Training Center, Karnali Province Government for research titled:
+<em>"Topographical Influence on Chemical Properties of Forest Soil in Karnali Province, Nepal"</em>.
+</p>
 </div>
 </section>
 
@@ -239,48 +245,66 @@ ul {
 <h2>Professional Experience</h2>
 
 <div class="card">
-<h3>Forest Technician – Forest Action</h3>
-<p>Feb 2025 – Present</p>
-<ul>
-<li>NFIS & SIS data management</li>
-<li>Forest monitoring under TAL project</li>
-<li>REDD+ safeguards implementation</li>
-</ul>
-</div>
-
-<div class="card">
 <h3>Senior Research Assistant – ANSAB</h3>
 <p>Aug 2025 – Sep 2025</p>
 <ul>
-<li>National inventory of high-value NTFPs</li>
-<li>Fieldwork up to 5100m in Dolpa</li>
+<li>Worked in Nepal’s first national-level resource inventory of high-value NTFPs funded by the UK Government’s Darwin Initiative.</li>
+<li>Conducted field inventory of Himalayan medicinal plants up to 5,100 m altitude in Dolpa District.</li>
+<li>Supported sustainable management and conservation of Himalayan NTFPs.</li>
 </ul>
 </div>
 
 <div class="card">
-<h3>Trainings & Workshops</h3>
+<h3>Forest Technician – Forest Action</h3>
+<p>Feb 2025 – Present</p>
 <ul>
-<li>Google Earth Engine Training – FRTC (2024)</li>
-<li>R & Maxent Training – FRTC (2024)</li>
-<li>Forest Mapping & Degradation Assessment</li>
-<li>GPS & GIS Training – IOF</li>
+<li>Participated in NFIS and SIS data management training.</li>
+<li>Contributed to forest monitoring activities under Terai Arc Landscape.</li>
+<li>Collaborated with DFO and REDD-IC representatives on forest safeguard mechanisms.</li>
 </ul>
 </div>
+
+<div class="card">
+<h3>Soil Science Intern – Soil Tech Consultant</h3>
+<p>May 2024 – Nov 2024</p>
+<ul>
+<li>Conducted soil chemical analysis including SOC, TN, P, K, pH.</li>
+<li>Worked on soil carbon fractionation and environmental quality assessments.</li>
+</ul>
+</div>
+
+<!-- TRAININGS MOVED HERE -->
+<h2>Trainings & Workshops</h2>
+
+<div class="card">
+<ul>
+<li>10 days training on Forest Mapping and Degradation Assessment Through Google Earth Engine (FRTC, 2024)</li>
+<li>Training on R Software and Maxent (FRTC, 2024)</li>
+<li>Two weeks field training on natural resource management (IOF, 2023)</li>
+<li>15 days observation tour for park activities and camera trapping (2023)</li>
+<li>7 days field training at Parsa and Chitwan National Park (2022)</li>
+<li>GPS and GIS training conducted by Institute of Forestry (2021)</li>
+<li>Workshop on technical writing, proposal writing and presentation skills</li>
+</ul>
+</div>
+
 </section>
 
 <!-- RESEARCH -->
 <section id="research">
-<h2>Research</h2>
+<h2>Research Publications</h2>
 
 <div class="card">
 <h3>BSc Thesis (2025)</h3>
 <p><strong>Topographical Influence on Chemical Properties of Forest Soil in Karnali Province</strong></p>
-<p>Used mixed-effects modeling to analyze altitude and aspect effects on SOC, TN and nutrients.</p>
+<p>
+This research examined how altitude and aspect influence soil organic carbon, total nitrogen, available phosphorus, potassium and pH across different elevation zones in Bhairam Community Forest, Surkhet. Statistical analysis using linear mixed-effects modeling revealed significant impacts of aspect and altitude on SOC and TN, highlighting topographic influence on carbon sequestration and soil fertility in Himalayan ecosystems.
+</p>
 </div>
 
 <div class="card">
-<h3>Publications</h3>
-<p>No published works yet.</p>
+<h3>Published Works</h3>
+<p>Currently no published works.</p>
 </div>
 </section>
 
