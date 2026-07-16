@@ -267,6 +267,38 @@
         <nav>
             <div class="logo">Kishor Dahal</div>
             <ul class="nav-links">
+
+    <li>
+        <a href="#" onclick="showSection('home', event)">
+            Home
+        </a>
+    </li>
+
+    <li>
+        <a href="#" onclick="showSection('resume', event)">
+            Resume
+        </a>
+    </li>
+
+    <li>
+        <a href="#" onclick="showSection('experience', event)">
+            Experience
+        </a>
+    </li>
+
+    <li>
+        <a href="#" onclick="showSection('gallery', event)">
+            Gallery
+        </a>
+    </li>
+
+    <li>
+        <a href="#" onclick="showSection('research', event)">
+            Research
+        </a>
+    </li>
+
+</ul>
                 <li><a href="#" onclick="showSection('home')">Home</a></li>
                 <li><a href="#" onclick="showSection('resume')">Resume</a></li>
                 <li><a href="#" onclick="showSection('experience')">Experience</a></li>
@@ -466,7 +498,7 @@
                 </ul>
             </div>
         </section>
-  <!-- ================= FIELD EXPERIENCE GALLERY ================= -->
+<!-- ================= FIELD EXPERIENCE GALLERY ================= -->
 
 <style>
 
@@ -474,13 +506,11 @@
     padding:40px 20px;
 }
 
-
 .gallery-section h2{
     text-align:center;
     font-size:32px;
     margin-bottom:30px;
 }
-
 
 .gallery{
     display:grid;
@@ -488,20 +518,17 @@
     gap:25px;
 }
 
-
 .gallery-card{
-    background:#ffffff;
+    background:var(--card-bg);
     border-radius:12px;
     overflow:hidden;
     box-shadow:0 5px 15px rgba(0,0,0,0.15);
     transition:0.3s ease;
 }
 
-
 .gallery-card:hover{
     transform:translateY(-5px);
 }
-
 
 .gallery-card img{
     width:100%;
@@ -509,36 +536,30 @@
     object-fit:cover;
 }
 
-
 .gallery-card h3{
     text-align:center;
     margin:15px 0 10px;
     font-size:22px;
+    color:var(--accent-color);
 }
-
 
 .gallery-card p{
     text-align:center;
     padding:0 15px 20px;
-    color:#555;
+    color:var(--text-color);
     line-height:1.5;
 }
-
 
 </style>
 
 
 <section id="gallery" class="gallery-section">
 
-<h2>
-Field Experiences & Project Gallery
-</h2>
+<h2>Field Experiences & Project Gallery</h2>
 
 
 <div class="gallery">
 
-
-<!-- ANSAB -->
 
 <div class="gallery-card">
 
@@ -555,8 +576,6 @@ National High Value NTFP Resource Inventory
 
 
 
-<!-- EFORD Nepal -->
-
 <div class="gallery-card">
 
 <img src="images/eford.jpg" alt="EFORD Nepal">
@@ -572,11 +591,9 @@ field data collection activities
 
 
 
-<!-- Soil Tech -->
-
 <div class="gallery-card">
 
-<img src="images/soiltech.jpg" alt="Soil Laboratory">
+<img src="images/soiltech.jpg" alt="Soil Tech">
 
 <h3>Soil Tech Consultant Pvt. Ltd.</h3>
 
@@ -589,11 +606,9 @@ soil chemical assessment
 
 
 
-<!-- Forest Action -->
-
 <div class="gallery-card">
 
-<img src="images/forestaction.jpg" alt="Forest Action Nepal">
+<img src="images/forestaction.jpg" alt="Forest Action">
 
 <h3>Forest Action Nepal</h3>
 
@@ -606,11 +621,9 @@ collection and training activities
 
 
 
-<!-- FRTC -->
-
 <div class="gallery-card">
 
-<img src="images/frtc.jpg" alt="FRTC Internship">
+<img src="images/frtc.jpg" alt="FRTC">
 
 <h3>Forest Research and Training Centre</h3>
 
@@ -622,8 +635,6 @@ remote sensing and R training
 </div>
 
 
-
-<!-- Chilime -->
 
 <div class="gallery-card">
 
@@ -639,13 +650,11 @@ and environmental assessment
 </div>
 
 
-
 </div>
-
 
 </section>
 
-<!-- ================= END GALLERY ================= -->
+<!-- ================= END FIELD EXPERIENCE GALLERY ================= -->
         
     <!-- Research Section -->
     <section id="research">
